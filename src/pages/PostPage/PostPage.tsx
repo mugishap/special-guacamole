@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
+import { CommonContext } from '../../context/CommonContext'
+import { IPost } from '../../types'
+import CommonComponent from '../../components/common/CommonComponent'
 
-const PostPage = () => {
+const PostPage: React.FC<{}> = () => {
+  const { posts } = useContext(CommonContext)
   return (
-    <div>PostPage</div>
+    <CommonComponent>
+      {
+        posts?.map((post: IPost, index: number) => (
+          <div>{post.body}</div>
+        ))
+      }
+    </CommonComponent>
   )
 }
 

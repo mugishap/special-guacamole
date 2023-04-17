@@ -1,38 +1,38 @@
-import { INavbarLink } from "../types";
-import { FaHome } from "react-icons/fa";
+import { ISidebarLink } from "../types";
+import { FaHome, FaUserCircle } from "react-icons/fa";
 import { BsFire } from "react-icons/bs";
 import { RiPagesFill } from 'react-icons/ri'
 import { MdExplore, MdOutlineLogout } from 'react-icons/md'
 import { IoLanguageSharp } from 'react-icons/io5'
 
-const navbarLink: INavbarLink[] = [
+export const sidebarLinks: ISidebarLink[] = [
     {
-        name: "Feed",
-        path: "/feed",
+        name: "feed",
+        path: "#",
         icon: FaHome
     },
     {
-        name: "Profile",
-        path: "/profile",
-        icon: FaHome
+        name: "profile",
+        path: "#",
+        icon: FaUserCircle
     },
     {
-        name: "Explore",
-        path: "/explore",
+        name: "explore",
+        path: "#",
         icon: MdExplore
     },
     {
-        name: "Language",
+        name: "language",
         path: "#",
         icon: IoLanguageSharp
     },
     {
-        name: "Logout",
+        name: "logout",
         path: "#",
         icon: MdOutlineLogout
     },
     {
-        name: "Pages",
+        name: "pages",
         path: "#",
         icon: RiPagesFill,
         hasSubmenu: true,
@@ -41,8 +41,8 @@ const navbarLink: INavbarLink[] = [
         ]
     },
     {
-        name: "Trending",
-        path: "/trending",
+        name: "trending",
+        path: "#",
         icon: BsFire
     }
 

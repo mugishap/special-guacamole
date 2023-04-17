@@ -1,8 +1,8 @@
 import { IconType } from "react-icons";
 
-export interface INavbarLink {
+export interface ISidebarLink {
     icon: IconType,
-    name: string,
+    name: "feed" | "profile" | "explore" | "language" | "logout" | "pages" | "trending",
     path: string,
     hasSubmenu?: boolean,
     submenu?: string[]
